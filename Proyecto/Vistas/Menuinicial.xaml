@@ -1,0 +1,29 @@
+﻿<Window x:Class="Proyecto.Menuinicial"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Proyecto"
+        mc:Ignorable="d"
+        Title="ATENEO" Height="450" Width="800">
+    <Grid x:Name="inicio_menu">
+        <Image x:Name="inicio_img_logo" Source="D:/Universidad/Sexto Semestre/Proyecto Integrador/Logos/logoupb.png" Height="133" Margin="263,10,263,0" VerticalAlignment="Top" Stretch="UniformToFill" />
+        <Label x:Name="inicio_label_usuario" Content="USUARIO" HorizontalAlignment="Left" Margin="114,212,0,0" VerticalAlignment="Top" FontFamily="Arial Black" FontWeight="Normal" FontSize="16"/>
+        <Label x:Name="inicio_label_contraseña" Content="CONTRASEÑA" HorizontalAlignment="Left" Margin="114,266,0,0" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="16"/>
+        <TextBox x:Name="inicio_textbox_usuario" Margin="300,217,200,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="1,1" Foreground="{x:Null}"/>
+        <TextBox x:Name="inicio_textbox_contraseña" Margin="300,271,200,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button x:Name="inicio_btn_ingresar" Content="Ingresar" Margin="387,309,287,0" VerticalAlignment="Top" FontFamily="Arial Black" BorderBrush="Black" Background="{DynamicResource {x:Static SystemColors.ControlLightLightBrushKey}}"/>
+        <Label x:Name="inicio_label_ateneo" Content="ATENEO" Margin="314,157,313,226" FontFamily="Arial Black" FontSize="36"/>
+        <Label x:Name="inicio_label_registrar" Content="REGISTRAR" HorizontalAlignment="Left" Margin="300,343,0,0" VerticalAlignment="Top" FontFamily="Arial" Background="{x:Null}" FontSize="11" OpacityMask="#7F000000"/>
+        <Label x:Name="inicio_label_olvidosucontraseña" Content="OLVIDO SU CONTRASEÑA" HorizontalAlignment="Left" Margin="451,343,0,0" VerticalAlignment="Top" FontSize="11" FontFamily="Arial">
+            <Label.OpacityMask>
+                <SolidColorBrush Color="Black" Opacity="0.49"/>
+            </Label.OpacityMask>
+        </Label>
+        <Image x:Name="inicio_img_facebook" HorizontalAlignment="Left" Margin="10,374,0,10" Width="40" Source="D:/Universidad/Sexto Semestre/Proyecto Integrador/Logos/facebook.png"/>
+        <Image x:Name="inicio_img_youtube" HorizontalAlignment="Left" Height="40" Margin="70,379,0,0" VerticalAlignment="Top" Width="40" Source="D:/Universidad/Sexto Semestre/Proyecto Integrador/Logos/youtube.png"/>
+        <Image x:Name="inicio_img_twiter" HorizontalAlignment="Left" Height="40" Margin="126,379,0,0" VerticalAlignment="Top" Width="40" Source="D:/Universidad/Sexto Semestre/Proyecto Integrador/Logos/twiter.png"/>
+        <Image HorizontalAlignment="Left" Height="40" Margin="171,379,0,0" VerticalAlignment="Top" Width="40" Source="D:/Universidad/Sexto Semestre/Proyecto Integrador/Logos/instagram.png"/>
+
+    </Grid>
+</Window>
