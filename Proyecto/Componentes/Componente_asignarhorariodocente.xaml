@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="Proyecto.Componentes.componente_asignarhorariodocente"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Proyecto.Componentes"
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="800">
+    <ScrollViewer HorizontalScrollBarVisibility="Auto">
+        <Grid Background="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="800"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="400"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Label x:Name="comasighodoc_label_buscar" Grid.Column="0" Content="Buscar ID:" HorizontalAlignment="Left" Margin="100,0,0,0" VerticalAlignment="Center" FontFamily="Arial" FontSize="30"/>
+            <TextBox x:Name="comasighodoc_texbox_buscar" Grid.Column="0" HorizontalAlignment="Left" Margin="276,0,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="400" FontFamily="Arial" FontSize="30"/>
+            <Image x:Name="comasighodoc_img_buscar" Grid.Column="0" HorizontalAlignment="Left" Height="30" Margin="695,0,0,0" VerticalAlignment="Center" Width="30" Source="D:/Universidad/Sexto Semestre/Proyecto Integrador/Logos/57477.png"/>
+
+            <local:Estudiante_misdatos x:Name="comasighodoc_componente_misdatos" Grid.Row="1" Grid.Column="0"/>
+            <Label x:Name="comasighodoc_label_disponibilidad" Content="DISPONIBILIDAD" HorizontalAlignment="Left" Height="50" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Center" Width="248" FontFamily="Arial Black" FontSize="24"/>
+            <ListBox x:Name="comasighodoc_listbox_disponibilidad" HorizontalAlignment="Left" Height="180" Margin="10,0,0,0" Grid.Row="3" VerticalAlignment="Center" Width="765"/>
+            <Label x:Name="comasighodoc_label_programas" Content="PROGRAMAS :" HorizontalAlignment="Left" Height="40" Margin="10,10,0,0" Grid.Row="5" VerticalAlignment="Top" Width="187" FontFamily="Arial Black" FontSize="22"/>
+            <ComboBox x:Name="comasighodoc_cbox_programas" HorizontalAlignment="Left" Height="30" Margin="221,10,0,0" Grid.Row="5" VerticalAlignment="Top" Width="550"/>
+            <Label x:Name="comasighodoc_label_semestre" Content="SEMESTRE :" HorizontalAlignment="Left" Height="30" Margin="10,0,0,0" Grid.Row="6" VerticalAlignment="Center" Width="187" FontFamily="Arial Black" FontSize="22"/>
+            <ComboBox x:Name="comasighodoc_cbox_semestre" HorizontalAlignment="Left" Height="30" Margin="221,0,0,0" Grid.Row="6" VerticalAlignment="Center" Width="550"/>
+            <Label x:Name="comasighodoc_label_materias" Content="MATERIAS :" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="7" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="22"/>
+            <ComboBox x:Name="comasighodoc_cbox_materias" HorizontalAlignment="Left" Height="30" Margin="221,10,0,0" Grid.Row="7" VerticalAlignment="Top" Width="550"/>
+            <Label x:Name="comasighodoc_label_fecha" Content="FECHA :" HorizontalAlignment="Left" Height="30" Margin="10,0,0,0" Grid.Row="8" VerticalAlignment="Center" Width="151" FontFamily="Arial Black" FontSize="22"/>
+            <DatePicker x:Name="comasighodoc_datepicker_fecha" HorizontalAlignment="Left" Height="30" Margin="221,0,0,0" Grid.Row="8" VerticalAlignment="Center" Width="550" FontFamily="Arial" FontSize="20"/>
+            <Label x:Name="comasighodoc_label_horainicio" Content="HORA INICIO :" HorizontalAlignment="Left" Height="30" Margin="10,0,0,0" Grid.Row="9" VerticalAlignment="Center" Width="187" FontFamily="Arial Black" FontSize="22"/>
+            <Label x:Name="comasighodoc_label_horafin" Content="HORA FINAL :" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="10" VerticalAlignment="Center" FontFamily="Arial Black" FontSize="22"/>
+            <Button x:Name="comasighodoc_btn_guardar"  Content="GUARDAR" HorizontalAlignment="Center" Grid.Row="11" VerticalAlignment="Center" FontFamily="Arial Black" FontSize="24" Background="White" BorderBrush="White" Height="50" Width="192"/>
+            <ComboBox x:Name="comasighodoc_cbox_horainicio" HorizontalAlignment="Left" Height="30" Margin="221,0,0,0" Grid.Row="9" VerticalAlignment="Center" Width="550"/>
+            <ComboBox x:Name="comasighodoc_cbox_horafin" HorizontalAlignment="Left" Height="30" Margin="221,0,0,0" Grid.Row="10" VerticalAlignment="Center" Width="550"/>
+
+
+
+
+
+        </Grid>
+    </ScrollViewer>
+
+</UserControl>

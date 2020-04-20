@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Proyecto.Vistas"
         xmlns:Componentes="clr-namespace:Proyecto.Componentes" x:Class="Proyecto.Vistas.Registro"
         mc:Ignorable="d"
-        Title="Registro" Height="450" Width="800">
+        Title="Registro" Height="4500" Width="800">
     <ScrollViewer VerticalScrollBarVisibility="Auto">
         <Grid Cursor="None" ScrollViewer.HorizontalScrollBarVisibility="Visible" HorizontalAlignment="Center" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.CanContentScroll="True" AutomationProperties.IsOffscreenBehavior="Default" Width="800">
             <Grid.ColumnDefinitions>
@@ -20,14 +20,14 @@
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
 
-            <Image HorizontalAlignment="Center" Height="100" Margin="0,0,0,0" VerticalAlignment="Top" Width="200" Source="D:/Universidad/Sexto Semestre/Proyecto Integrador/Logos/logoupb.png" Stretch="Uniform"/>
-            <Label Content="Tipo de usuario " VerticalAlignment="Center" FontFamily="Arial" FontSize="16" Height="28" RenderTransformOrigin="0.508,0.359" HorizontalAlignment="Left" Width="124" Grid.Row="1" Grid.ColumnSpan="2" Margin="130,0,0,0"/>
+            <Image x:Name="registro_img_logo" HorizontalAlignment="Center" Height="100" Margin="0,0,0,0" VerticalAlignment="Top" Width="200" Source="D:/Universidad/Sexto Semestre/Proyecto Integrador/Logos/logoupb.png" Stretch="Uniform"/>
+            <Label x:Name="registro_label_tipo" Content="Tipo de usuario " VerticalAlignment="Center" FontFamily="Arial" FontSize="16" Height="28" RenderTransformOrigin="0.508,0.359" HorizontalAlignment="Left" Width="124" Grid.Row="1" Grid.ColumnSpan="2" Margin="130,0,0,0"/>
             <ComboBox x:Name="registro_cbox_tipo" HorizontalAlignment="Left" VerticalAlignment="Center" Width="312" Height="30" BorderBrush="#FFF9F9F9" Background="{x:Null}" Grid.Column="1" Grid.Row="1" Margin="100,0,0,0">
                 <ComboBoxItem Content="DOCENTES"/>
                 <ComboBoxItem Content="ESTUDIANTES"/>
             </ComboBox>
-            <Label Content="Registro" Grid.Column="1" HorizontalAlignment="Left" Height="51" Margin="144,27,0,0" VerticalAlignment="Top" Width="270" FontFamily="Arial Black" FontSize="36"  Grid.Row="0" />
-            <Componentes:Registrar Grid.Column="0" HorizontalAlignment="Center" Height="auto" Margin="10,10,10,10" Grid.Row="2" VerticalAlignment="Center" Width="auto" Grid.ColumnSpan="2"/>
+            <Label x:Name="registro_label_registro" Content="Registro" Grid.Column="1" HorizontalAlignment="Left" Height="51" Margin="144,27,0,0" VerticalAlignment="Top" Width="270" FontFamily="Arial Black" FontSize="36"  Grid.Row="0" />
+            <Componentes:Registrar x:Name="registro_componenteregistrar" Grid.Column="0" HorizontalAlignment="Center" Height="auto" Margin="10,10,10,10" Grid.Row="2" VerticalAlignment="Center" Width="auto" Grid.ColumnSpan="2"/>
 
         </Grid>
     </ScrollViewer>

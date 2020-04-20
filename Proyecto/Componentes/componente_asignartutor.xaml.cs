@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -13,14 +11,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Proyecto
+namespace Proyecto.Componentes
 {
     /// <summary>
-    /// Interaction logic for Menuinicial.xaml
+    /// Lógica de interacción para componente_asignartutor.xaml
     /// </summary>
-    public partial class Menuinicial : Window
+    public partial class componente_asignartutor : UserControl
     {
-        public Menuinicial()
+        public componente_asignartutor()
         {
             InitializeComponent();
         }

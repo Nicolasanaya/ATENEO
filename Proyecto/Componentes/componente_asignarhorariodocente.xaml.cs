@@ -8,16 +8,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Proyecto.Vistas
+namespace Proyecto.Componentes
 {
     /// <summary>
-    /// Lógica de interacción para Administrador.xaml
+    /// Lógica de interacción para componente_asignarhorariodocente.xaml
     /// </summary>
-    public partial class Administrador : Window
+    public partial class componente_asignarhorariodocente : UserControl
     {
-        public Administrador()
+        public componente_asignarhorariodocente()
         {
             InitializeComponent();
         }

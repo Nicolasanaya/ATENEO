@@ -7,17 +7,18 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Background="White">
-        <Label Content="Materia :" HorizontalAlignment="Left" Margin="155,100,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="22"/>
-        <Label Content="Dia:" HorizontalAlignment="Left" Margin="155,140,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="22"/>
-        <Label Content="Hora Inicio:" HorizontalAlignment="Left" Margin="155,180,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="22"/>
-        <Label Content="Hora final:" HorizontalAlignment="Left" Margin="155,220,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="22"/>
-        <TextBox HorizontalAlignment="Left" Margin="300,104,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" FontFamily="Arial" FontSize="22"/>
-        <TextBox HorizontalAlignment="Left" Margin="300,184,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" FontFamily="Arial" FontSize="22"/>
-        <TextBox HorizontalAlignment="Left" Margin="300,225,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" FontFamily="Arial" FontSize="22"/>
-        <DatePicker HorizontalAlignment="Left" Margin="300,140,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="22" Width="350"/>
-        <Button Content="ASIGNAR" HorizontalAlignment="Left" Margin="351,334,0,0" VerticalAlignment="Top" Background="#FFFFFCFC" BorderBrush="White" FontFamily="Arial Black" FontSize="24"/>
-        <Label Content="Tipo Horario:" HorizontalAlignment="Left" Margin="155,266,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="22"/>
-        <ComboBox HorizontalAlignment="Left" Height="30" Margin="300,269,0,0" VerticalAlignment="Top" Width="350" RenderTransformOrigin="0.013,0.342" >
+        <Label x:Name="comasignarhorario_label_materia" Content="Materia :" HorizontalAlignment="Left" Margin="155,100,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="22"/>
+        <Label x:Name="comasignarhorario_label_dia" Content="Dia:" HorizontalAlignment="Left" Margin="155,140,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="22"/>
+        <Label x:Name="comasignarhorario_label_horainicio" Content="Hora Inicio:" HorizontalAlignment="Left" Margin="155,180,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="22"/>
+        <Label x:Name="comasignarhorario_label_horafinal" Content="Hora final:" HorizontalAlignment="Left" Margin="155,220,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="22"/>
+        <TextBox x:Name="comasignarhorario_texbox_materia" HorizontalAlignment="Left" Margin="300,104,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" FontFamily="Arial" FontSize="22" RenderTransformOrigin="1,0.5"/>
+
+        <TextBox x:Name="comasignarhorario_texbox_horainicio" HorizontalAlignment="Left" Margin="300,184,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" FontFamily="Arial" FontSize="22"/>
+        <TextBox x:Name="comasignarhorario_texbox_horafin" HorizontalAlignment="Left" Margin="300,225,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" FontFamily="Arial" FontSize="22"/>
+        <DatePicker x:Name="comasignarhorario_datepicker_dia" HorizontalAlignment="Left" Margin="300,140,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="22" Width="350"/>
+        <Button x:Name="comasignarhorario_btn_asignar" Content="ASIGNAR" HorizontalAlignment="Center" Margin="0,336,0,0" VerticalAlignment="Top" Background="#FFFFFCFC" BorderBrush="White" FontFamily="Arial Black" FontSize="24" Height="48" Width="160"/>
+        <Label x:Name="comasignarhorario_label_tipohorario" Content="Tipo Horario:" HorizontalAlignment="Left" Margin="155,266,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="22"/>
+        <ComboBox x:Name="comasignarhorario_cbox_tipohorario" HorizontalAlignment="Left" Height="30" Margin="300,269,0,0" VerticalAlignment="Top" Width="350" RenderTransformOrigin="0.013,0.342" >
             <ComboBoxItem Content="ATENEO"></ComboBoxItem>
             <ComboBoxItem Content="HORA DE CONSULTA"></ComboBoxItem>
             <ComboBoxItem Content="AMBOS"></ComboBoxItem>

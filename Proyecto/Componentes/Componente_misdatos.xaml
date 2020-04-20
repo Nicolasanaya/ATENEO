@@ -5,25 +5,37 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Proyecto.Componentes"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="800"
+             HorizontalAlignment="Center">
+
     <Grid x:Name="Estu_misdatos" Background="White">
-        <Label Content="Tipo de usuario " HorizontalAlignment="Left" Margin="84,40,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20"/>
-        <Label Content="Nombre" HorizontalAlignment="Left" Margin="84,84,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20"/>
-        <Label Content="Apellidos" HorizontalAlignment="Left" Margin="84,126,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Arial"/>
-        <Label Content="ID" HorizontalAlignment="Left" Margin="84,168,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20"/>
-        <Label Content="Correo Institucional" HorizontalAlignment="Left" Margin="84,0,0,0" VerticalAlignment="Center" FontFamily="Arial" FontSize="20"/>
-        <Label Content="Celular" HorizontalAlignment="Left" Margin="84,253,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20"/>
-        <Label Content="Carrera" HorizontalAlignment="Left" Margin="84,294,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20"/>
-        <TextBox Height="30" Margin="315,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Arial" FontSize="20" HorizontalAlignment="Left" Width="400"/>
-        <TextBox Margin="315,85,0,335" TextWrapping="Wrap" FontFamily="Arial" FontSize="20" HorizontalAlignment="Left" Width="400"/>
-        <TextBox Height="30" Margin="315,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Arial" FontSize="20" HorizontalAlignment="Left" Width="400"/>
-        <TextBox Height="30" Margin="315,169,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Arial" FontSize="20" HorizontalAlignment="Left" Width="400"/>
-        <TextBox Height="30" Margin="315,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Arial" FontSize="20" HorizontalAlignment="Left" Width="400"/>
-        <TextBox Height="30" Margin="315,254,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Arial" FontSize="20" HorizontalAlignment="Left" Width="400"/>
-        <TextBox Height="30" Margin="315,295,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Arial" FontSize="20" HorizontalAlignment="Left" Width="400"/>
-        <TextBox Height="30" Margin="315,340,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Arial" FontSize="20" HorizontalAlignment="Left" Width="400"/>
-        <Label Content="Carrera Secundaria" HorizontalAlignment="Left" Margin="84,339,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20"/>
-        <Button Content="EDITAR" Margin="354,402,0,0" VerticalAlignment="Top" BorderBrush="White" Background="White" FontFamily="Arial Black" FontSize="22" HorizontalAlignment="Left" Width="94"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="500"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="comdatos_label_nombre" Content="Nombre" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" Margin="74,0,0,0" VerticalAlignment="Center" FontFamily="Arial" FontSize="20"/>
+        <Label x:Name="comdatos_label_apellidos" Content="Apellidos" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Left" Margin="74,0,0,0" VerticalAlignment="Center" FontSize="20" FontFamily="Arial"/>
+        <Label x:Name="comdatos_label_id" Content="ID" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Left" Margin="74,0,0,0" VerticalAlignment="Center" FontFamily="Arial" FontSize="20"/>
+        <Label x:Name="comdatos_label_correo" Content="Correo Institucional" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Left" Margin="74,10,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20"/>
+        <Label x:Name="comdatos_label_celular" Content="Celular" Grid.Row="5" HorizontalAlignment="Left" Margin="74,0,0,0" VerticalAlignment="Center" FontFamily="Arial" FontSize="20"/>
+        <Label x:Name="comdatos_label_carrera" Content="Carrera" Grid.Row="6" Grid.Column="0" HorizontalAlignment="Left"  Margin="74,10,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20"/>
+        <TextBox x:Name="comdatos_texbox_nombre"  Margin="15,10,0,10" Grid.Row="1" Grid.Column="1" TextWrapping="Wrap" FontFamily="Arial" FontSize="20" HorizontalAlignment="Left" Width="400"/>
+        <TextBox x:Name="comdatos_texbox_apellidos"  Height="30" Grid.Row="2" Grid.Column="1" Margin="15,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Arial" FontSize="20" HorizontalAlignment="Left" Width="400"/>
+        <TextBox x:Name="comdatos_texbox_id" Height="30" Grid.Row="3" Grid.Column="1" Margin="15,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Arial" FontSize="20" HorizontalAlignment="Left" Width="400"/>
+        <TextBox x:Name="comdatos_texbox_correo" Height="30" Grid.Row="4" Grid.Column="1" Margin="15,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Arial" FontSize="20" HorizontalAlignment="Left" Width="400"/>
+        <TextBox x:Name="comdatos_texbox_celular" Height="30" Grid.Row="5" Grid.Column="1" Margin="15,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Arial" FontSize="20" HorizontalAlignment="Left" Width="400"/>
+        <Button x:Name="comdatos_btn_editar" Content="EDITAR" Grid.Row="7" Margin="39,0,0,0" VerticalAlignment="Center" BorderBrush="White" Background="White" FontFamily="Arial Black" FontSize="22" HorizontalAlignment="Left" Width="122" Grid.Column="1" Height="42"/>
+        <ComboBox x:Name="comdatos_cbox_carrera" Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="15,0,0,0" Grid.Row="6" VerticalAlignment="Center" Width="400"/>
 
     </Grid>
 </UserControl>

@@ -22,7 +22,7 @@
             <RowDefinition Height="130"/>
         </Grid.RowDefinitions>
         <Border BorderBrush="Gray" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" BorderThickness="2">
-            <Label Content="SALIR" HorizontalAlignment="Left" Height="28" Margin="638,16,0,0" VerticalAlignment="Top" Width="78" FontFamily="Arial Black" FontSize="20"/>
+            <Label x:Name="perfil_label_salir" Content="SALIR" HorizontalAlignment="Left" Height="28" Margin="638,16,0,0" VerticalAlignment="Top" Width="78" FontFamily="Arial Black" FontSize="20"/>
         </Border>
         <Border BorderBrush="Gray" Grid.Column="0" Grid.Row="1" BorderThickness="2"/>
         <Border BorderBrush="Gray" Grid.Column="0" Grid.Row="2" BorderThickness="2"/>
@@ -31,13 +31,13 @@
         <Border BorderBrush="Gray" Grid.Column="0" Grid.Row="5" BorderThickness="2"/>
         <Border BorderBrush="Gray" Grid.Column="0" Grid.Row="6" BorderThickness="2"/>
         <Border BorderBrush="Gray" Grid.Column="2" Grid.Row="1" Grid.RowSpan="6" BorderThickness="2"/>
-        <Image HorizontalAlignment="Center" Height="80" Margin="0,0,0,0" VerticalAlignment="Center" Width="auto" Source="D:/Universidad/Sexto Semestre/Proyecto Integrador/Logos/logoupb.png" Stretch="Uniform" Grid.Column="0" Grid.Row="6"/>
-        <Label x:Name="estudiante_label_datos" Content="Mis datos" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Row="1" VerticalAlignment="Center" FontFamily="Arial Black" FontSize="20"/>
-        <Label x:Name="estudiante_label_mishorarios" Content="Mis Horarios" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Row="2" VerticalAlignment="Center" FontFamily="Arial Black" FontSize="20"/>
-        <Label x:Name="estudiante_label_buscarhorario" Content="Buscar Horario" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" FontFamily="Arial Black" FontSize="20"/>
-        <Label x:Name="estudiante_label_asignarhorario" Content="Asignar Horario" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" FontFamily="Arial Black" FontSize="20"/>
-        <Label Content="ESTUDIANTE" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontFamily="Arial Black"/>
-        <Image Grid.Column="1" HorizontalAlignment="Left" Height="53" Margin="529,0,0,0" VerticalAlignment="Center" Width="57" Source="D:/Universidad/Sexto Semestre/Proyecto Integrador/Logos/56805.png" Stretch="Uniform"/>
+        <Image x:Name="perfil_img_logo" HorizontalAlignment="Center" Height="80" Margin="0,0,0,0" VerticalAlignment="Center" Width="auto" Source="D:/Universidad/Sexto Semestre/Proyecto Integrador/Logos/logoupb.png" Stretch="Uniform" Grid.Column="0" Grid.Row="6"/>
+        <Label x:Name="perfil_label_datos" Content="Mis datos" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Row="1" VerticalAlignment="Center" FontFamily="Arial Black" FontSize="20"/>
+        <Label x:Name="perfil_label_mishorarios" Content="Mis Horarios" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Row="2" VerticalAlignment="Center" FontFamily="Arial Black" FontSize="20"/>
+        <Label x:Name="perfil_label_buscarhorario" Content="Buscar Horario" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" FontFamily="Arial Black" FontSize="20"/>
+        <Label x:Name="perfil_label_asignarhorario" Content="Asignar Horario" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" FontFamily="Arial Black" FontSize="20"/>
+        <Label x:Name="perfil_label_tusuario" Content="ESTUDIANTE" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontFamily="Arial Black"/>
+        <Image x:Name="perfil_img_salir" Grid.Column="1" HorizontalAlignment="Left" Height="53" Margin="529,0,0,0" VerticalAlignment="Center" Width="57" Source="D:/Universidad/Sexto Semestre/Proyecto Integrador/Logos/56805.png" Stretch="Uniform"/>
 
 
     </Grid>
