@@ -10,6 +10,7 @@ namespace ConexiónBaseDatos.Modelos
         [Key]
         public int H_Is { get; set; }
         public Tipo_Horario Tipos_Horarios { get; set; }
+        public CantidadCupos CantidadCupos { get; set; }
         public List<Usuario_Horario> H_Usuarios_Horarios { get; set; }
         public List<Horario_Materia> H_Horarios_Materias { get; set; }
     }

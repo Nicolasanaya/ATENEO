@@ -14,26 +14,37 @@ namespace ConexiónBaseDatos.Clases
     {
         #region Crear usuario
         /// <summary>
-        /// Se debe ingresar los datos en formato string
+        /// Se debe ingresar los datos en formato string, el identificador es el id con el que el usuario esta registrado en la u
         /// </summary>
         /// <param name="usuario"></param>
         /// <param name="nombre"></param>
         /// <param name="apellidos"></param>
         /// <param name="correo"></param>
+        /// <param name="identificador"></param>
         /// <param name="telefono"></param>
         /// <param name="contraseña"></param>
         /// <param name="tipoUsuario"></param>
         /// <param name="programa"></param>
         /// <returns></returns>
-        public static async Task<string> CrearUsuario(string nombre, string apellidos, string correo, string telefono, string contraseña, string tipoUsuario, string programa)
+        public static async Task<string> CrearUsuario(string nombre, string apellidos, string correo,int identificador, string telefono, string contraseña, string tipoUsuario, string programa)
         {
+            Estado estado;
             try
             {
                 using (var context = new DBAteneoMySqlContext())
                 {
                     var email = context.Usuarios.FirstOrDefault(c => c.U_Correo.Equals(correo));
-                    if (email == null)
+                    var Id = context.Usuarios.FirstOrDefault(id => id.U_Identificador.Equals(identificador));
+                    if (email == null && Id == null)
                     {
+                        if (tipoUsuario.Equals("Docente"))
+                        {
+                            estado = context.Estados.FirstOrDefault(es => es.E_Nombre.Equals("En espera"));
+                        }
+                        else
+                        {
+                            estado = context.Estados.FirstOrDefault(es => es.E_Nombre.Equals("Aprovado"));
+                        }
                         var tipo = context.Tipos_Usuarios.FirstOrDefault(tp => tp.TU_Identificador.Equals(tipoUsuario));
                         var program = context.Programas.FirstOrDefault(p => p.Pro_Nombre.Equals(programa));
                         var user = new Usuario
@@ -41,10 +52,12 @@ namespace ConexiónBaseDatos.Clases
                             U_Nombre = nombre,
                             U_Apellidos = apellidos,
                             U_Correo = correo,
+                            U_Identificador = identificador,
                             U_Telefono = telefono,
                             U_Contraseña = Encriptar.HashPassword(contraseña),
                             Tipos_Usuarios = tipo,
-                            Programas = program
+                            Programas = program,
+                            Estados = estado
                         };
                         context.Usuarios.Add(user);
                         await context.SaveChangesAsync();
@@ -76,12 +89,23 @@ namespace ConexiónBaseDatos.Clases
             {
                 using (var context = new DBAteneoMySqlContext())
                 {
-                    var login = await context.Usuarios.FirstOrDefaultAsync(u => u.U_Correo.Equals(correo));
+                    var login = await context.Usuarios.Include(es => es.Estados).FirstOrDefaultAsync(u => u.U_Correo.Equals(correo));
                     if (login != null)
                     {
                         if (Encriptar.Verify(contraseña, login.U_Contraseña))
                         {
-                            return "AAU3";
+                            if (login.Estados.E_Nombre.Equals("Aprovado"))
+                            {
+                                return "AAU3";
+                            }
+                            else if (login.Estados.E_Nombre.Equals("En espera"))
+                            {
+                                return "AAU6";
+                            }
+                            else
+                            {
+                                return "AAU7";
+                            }
                         }
                         else
                         {
@@ -100,10 +124,6 @@ namespace ConexiónBaseDatos.Clases
                 return "EAU2";
             }
         }
-        #endregion
-
-        #region Admin
-
         #endregion
     }
 }

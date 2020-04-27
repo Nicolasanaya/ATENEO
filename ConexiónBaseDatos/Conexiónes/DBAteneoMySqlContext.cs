@@ -35,6 +35,10 @@ namespace ConexiónBaseDatos.Context
 
         public DbSet<Programa_Materia_Semestre> Programas_Materias_Semestres { get; set; }
 
+        public DbSet<Estado> Estados { get; set; }
+
+        public DbSet<CantidadCupos> CantidadCupos { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

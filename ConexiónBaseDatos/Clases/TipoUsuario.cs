@@ -21,7 +21,10 @@ namespace ConexiónBaseDatos.Clases
                 var tipo = new List<TipoUsuarioDTOs>();
                 foreach (var item in TPDB)
                 {
-                    tipo.Add(new TipoUsuarioDTOs() { TP_Identificador = item.TU_Identificador});
+                    if (!item.TU_Id.Equals(3))
+                    {
+                        tipo.Add(new TipoUsuarioDTOs() { TP_Identificador = item.TU_Identificador });
+                    }
                 }
                 return tipo;
             }

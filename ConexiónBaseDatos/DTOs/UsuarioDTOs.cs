@@ -4,8 +4,39 @@ using System.Text;
 
 namespace ConexiónBaseDatos.DTOs
 {
-    class UsuarioDTOs
-    {
+	public class UsuariosDocentes
+	{
+		public string Nombre { get; set; }
 
-    }
+		public string Apellidos { get; set; }
+
+		public string Correo { get; set; }
+
+		public int Identificador { get; set; }
+
+		public string Telefono { get; set; }
+
+		public string TipoUsuario { get; set; }
+
+		public string Estado { get; set; }
+	}
+
+	public class UsuariosEstudientes
+	{
+		public string Nombre { get; set; }
+
+		public string Apellidos { get; set; }
+
+		public string Correo { get; set; }
+
+		public int Identificador { get; set; }
+
+		public string Telefono { get; set; }
+
+		public string TipoUsuario { get; set; }
+
+		public string Programa { get; set; }
+
+		public string Estado { get; set; }
+	}
 }
