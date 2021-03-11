@@ -1,2 +1,2 @@
 language: c#
-version: netcore 5.0
+netcore: "3.1"
