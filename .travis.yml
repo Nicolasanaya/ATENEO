@@ -1,1 +1,2 @@
 language: c#
+version: netcore 5.0
